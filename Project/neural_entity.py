@@ -13,8 +13,8 @@ class NeuralEntity(ABC, Entity):
             """
             Uses neural network to decide on an action for a NeuralEntity object.
 
-            :Param input: The input the neural network generates a prediction from.
-            :Return: The decision made on what action to take.
+            :param input: The input the neural network generates a prediction from.
+            :return: The decision made on what action to take.
             """
             pass
 
