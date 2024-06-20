@@ -7,5 +7,9 @@ class Entity(ABC):
         self.y = y
 
     @abstractmethod
+    def update(self):
+        pass
+
+    @abstractmethod
     def draw(self, screen: pygame.Surface):
         pass
