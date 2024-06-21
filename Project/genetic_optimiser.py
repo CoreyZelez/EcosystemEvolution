@@ -40,11 +40,12 @@ class GeneticOptimiser:
 
         self.generations = dict()  # Maps species id to list of generations.
 
-    def perform_optimisation_step(self, generation: Generation):
+    def perform_optimisation_step(self, generation: Generation, next_gen_size: int):
         """
         Performs genetic optimisation on a generation of some species.
 
-        :param generation: The generation the optimisation step is performed for.
+        :param generation: The generation the optimisation step is performed on.
+        :nexxt_gen_size: The size of the next generation.
         :return: The individuals in the next generation.
         """
         # Add diversification * N random individuals to the parents list.
@@ -56,5 +57,3 @@ class GeneticOptimiser:
         # after this process there will be K entities in the next generation.
         # Repeat the above process terminating as soon as the number of entities in the next
         # generation equals the number in the previous generation.
-
-

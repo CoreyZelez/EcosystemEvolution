@@ -14,21 +14,24 @@ class NeuralDecisionMaker(ABC):
         Uses neural network to decide on an action for a NeuralEntity object.
 
         :param input: The input the neural network generates a prediction from.
-        :return: The decision made on what action to take.
+        :return: The action to be taken by the associated entity.
         """
         pass
 
 class EntityScorer(ABC):
     """
-    Handles the scoring of a game entity.
+    Handles the scoring of an entity.
     """
-    def __init__(self):
+    def __init__(self, entity: Entity):
+        """
+        :param entity: The entity being scored.
+        """
         self.score = 0
 
     @abstractmethod
     def update(self, entity):
         """
-        Updates
+        Updates the score of the entity
         """
         pass
 
